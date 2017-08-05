@@ -1,9 +1,14 @@
-<h1>Share your favorite coffee recipe and espresso yourself!</h1>
 
-<%= simple_form_for @recipe do |f| %>
-  <%= f.input :title %>
-  <%= f.input :ingredients %>
-  <%= f.input :espresso_yourself %>
-  <%= f.input :author %>
-  <%= f.submit "Share!" %>
-<% end %>
+<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 card form">
+
+  <h2>Share your favorite coffee recipe and espresso yourself!</h2>
+
+  <%= simple_form_for @recipe do |f| %>
+    <%= f.input :title %>
+    <%= f.input :ingredients %>
+    <%= f.input :espresso_yourself %>
+    <%= f.input :author %>
+    <%= f.submit "Share!" %>
+  <% end %>
+
+</div>

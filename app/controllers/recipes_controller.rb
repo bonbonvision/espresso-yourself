@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   
   def index
+    @recipes = Recipe.all
   end
 
   def new 
@@ -10,6 +11,10 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     redirect_to root_path
+  end
+
+  def show
+    @recipe = Recipe.find(params[:id])
   end
 
   private
