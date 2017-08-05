@@ -17,10 +17,10 @@ RSpec.describe RecipesController, type: :controller do
 
   describe "recipes#create action" do
     it "should successfully create a recipe in the database" do
-      post :create, params: { recipe: { title: 'Coffee', recipe: 'ingredients', espresso_yourself: 'happy', author: 'Me'} }
+      post :create, params: { recipe: { title: 'Coffee'} }
       expect(response).to redirect_to root_path
       recipe = Recipe.last
-      expect(title.recipe.espresso_yourself.author).to eq("Coffee", "ingredients", "happy", "Me")
+      expect(recipe.title).to eq("Coffee")
     end
   end
 end
