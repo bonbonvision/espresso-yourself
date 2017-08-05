@@ -7,4 +7,11 @@ RSpec.describe RecipesController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe "recipes#new action" do
+    it "should successfully show the new form" do
+      get :new
+      expect(response).to have_http_status(:success)
+    end
+  end
 end
