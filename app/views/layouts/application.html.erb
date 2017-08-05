@@ -3,12 +3,26 @@
   <head>
     <title>EspressoYourself</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 logo">
+            <%= link_to 'Expresso Yourself', root_path %> 
+          </div>
+          <div class="col-12 col-sm-6 links">
+            <div class="btn">
+              <%= link_to 'Share Your Favorite Recipe', new_recipe_path %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
